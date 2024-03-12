@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.homework7.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/taskKayitGecis"
+            app:destination="@id/taskKayitFragment" />
+        <action
+            android:id="@+id/taskDetayGecis"
+            app:destination="@id/taskDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetayFragment"
+        android:name="com.example.homework7.ui.fragment.TaskDetayFragment"
+        android:label="fragment_task_detay"
+        tools:layout="@layout/fragment_task_detay">
+        <argument
+            android:name="task"
+            app:argType="com.example.homework7.data.entity.Tasks" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskKayitFragment"
+        android:name="com.example.homework7.ui.fragment.TaskKayitFragment"
+        android:label="fragment_task_kayit"
+        tools:layout="@layout/fragment_task_kayit" />
+</navigation>
